@@ -9,6 +9,22 @@ app = Flask(__name__)
 
 def spamham(text):
 
+    """Spamham classifier function
+
+    Inputs
+    ------
+
+    text : list [str,]
+        list of strings to classify
+
+    Returns
+    -------
+
+    list [str, ]
+        list of classifications either ham or spam
+    
+    """
+
     X = vectorizer.transform(text)
     prediction = classifier.predict(X)
 
